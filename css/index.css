@@ -72,7 +72,7 @@ section, footer{
 }
 a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: calc(.5vw+1.5rem);
 }
 .container {
     width: 80%;
@@ -88,11 +88,12 @@ nav{
 }
 
 .logo{
-    width:20%;
+    width:25%;
     object-fit: contain;
     margin:2% 0;
 }
 .links{
+    padding-left: 4%;
     display:flex;
     justify-content: space-between;
     width:65%;
@@ -102,6 +103,7 @@ nav{
 }
 header{
     width:100%;
+    margin-top: 3%;
 }
 .banner img{
     width:100%;
@@ -114,13 +116,16 @@ header{
     justify-content: space-between;
     margin-bottom: 4%;
     border-bottom: 2px solid #ff4b00;
-    text-align: justify;
+    text-align: left;
 }
 
 .top-content .text-container {
-    width: 35%;
+    width: 49%;
     padding: 0 1%;
     padding-bottom: 4%;  
+}
+.top-content .text-container h2{
+    text-align:center;
 }
 
 /*Middle Section Styles*/
@@ -199,11 +204,19 @@ footer {
     width: 100%;
     background-color: #ff4b00;
 }
+footer nav{
+    padding:0 9%;
+}
 footer nav a{
     color:white;
+    font-size: 2rem;
 }
 
 /*About Page Styles*/
 
 
 /*Responsive Styles*/
+
+@media only screen and (max-width:500px){
+    
+}
