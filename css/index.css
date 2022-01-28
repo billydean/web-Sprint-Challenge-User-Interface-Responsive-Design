@@ -49,6 +49,8 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
+    /* border:2px solid red; */
 }
 
 html{
@@ -68,11 +70,44 @@ h1, h2, h3, h4, h5 {
 section, footer{
     padding:4% 0;
 }
+a {
+    text-decoration: none;
+    font-size: calc(.5vw+1.5rem);
+}
 .container {
     width: 80%;
     margin: 0 auto;
 }
+/* Header Styles*/
+nav{
+    margin-top:1%;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+}
 
+.logo{
+    width:25%;
+    object-fit: contain;
+    margin:2% 0;
+}
+.links{
+    padding-left: 4%;
+    display:flex;
+    justify-content: space-between;
+    width:65%;
+}
+.links a {
+    color:black;
+}
+header{
+    width:100%;
+    margin-top: 3%;
+}
+.banner img{
+    width:100%;
+}
 /*Top Section Styles*/
 
 .top-content {
@@ -81,18 +116,22 @@ section, footer{
     justify-content: space-between;
     margin-bottom: 4%;
     border-bottom: 2px solid #ff4b00;
-    text-align: justify;
+    text-align: left;
 }
 
 .top-content .text-container {
-    width: 35%;
+    width: 49%;
     padding: 0 1%;
     padding-bottom: 4%;  
+}
+.top-content .text-container h2{
+    text-align:center;
 }
 
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
+    
 }
 
 .middle-content h2 {
@@ -103,17 +142,50 @@ section, footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* gap:4vw; */
+    padding: 0 2vw 2vw 2vw;
+    align-content: space-around;
 }
 
 .middle-content .boxes .box {
-    background: black;
-    margin: 4% 0;
+    margin: 1vw 0 0 0;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    height:14vw;
+    width:14vw;
 }
-
+.box:nth-child(1) {
+    background:teal;
+}
+.box:nth-child(2) {
+    background:gold;
+}
+.box:nth-child(3) {
+    background:cadetblue;
+}
+.box:nth-child(4) {
+    background:coral;
+}
+.box:nth-child(5) {
+    background:crimson;
+}
+.box:nth-child(6) {
+    background:forestgreen;
+}
+.box:nth-child(7) {
+    background:darkorchid;
+}
+.box:nth-child(8) {
+    background:hotpink;
+}
+.box:nth-child(9) {
+    background:indigo;
+}
+.box:nth-child(10) {
+    background:dodgerblue;
+}
 /*Bottom Section Styles*/
 .bottom-content {
     display: flex;
@@ -133,8 +205,134 @@ footer {
     width: 100%;
     background-color: #ff4b00;
 }
+footer nav{
+    padding:0 9%;
+    display:flex;
+    flex-direction: row;
+}
+footer nav a{
+    color:white;
+    font-size: 1.6rem;
+}
 
 /*About Page Styles*/
-
+.top-about {
+    border-bottom: 2px solid #ff4b00;
+}
+.middle-about {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 7%;
+    padding: 0%;
+}
+.middle-box {
+    border-bottom: 2px solid #ff4b00;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:45%;
+    margin-bottom: 6%;
+}
+.middle-text {
+    padding: 4% 0;
+    margin-bottom: 6%;
+}
+.bottom-about {
+    padding:0%;
+    margin-bottom: 6%;
+}
 
 /*Responsive Styles*/
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    /*Responsive Styles for Nav*/
+    nav{
+        flex-direction:column;
+        padding:0;
+        margin-top: 2%;
+        align-items:center;
+        
+    }
+    .logo {
+        padding-top: 2%;
+        width:40%;
+    }
+    .links{
+        padding:0;
+        justify-content: space-between;
+        width:100%;
+    }
+    /*Responsive Styles for About Page*/
+    .middle-about{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width:100%;
+        margin-top: 4%
+    }
+    .middle-box{
+        width:100%;
+        margin-bottom: 8%;
+        padding-top: 4%;
+    }
+    .top-about{
+        margin-top: 5%;
+        padding-bottom: 8%;
+    }
+    /*Responsive Style for Index*/
+    .top-content {
+        flex-direction: column;
+    }
+    .top-content .text-container {
+        width:100%;
+    }
+    .text-container h2 {
+        padding:4%;
+    }
+    .middle-content {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        padding-bottom: 0;
+    }
+    .middle-content .boxes {
+        margin-top: 4%;
+        justify-content: space-around;
+    }
+    .middle-content .boxes .box {
+        width:32vw;
+        height:25vw;
+        margin-top: 5vw;
+    }
+    .middle-content h2 {
+        width: 85%;
+    }
+    .container h2 {
+        font-size: 2.3rem;
+    }
+    .bottom-content {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 10%;
+    }
+    .bottom-content .text-container {
+        width:85%;
+        text-align: center;
+    }
+    footer {
+        margin: 0;
+    }
+    footer nav{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin:0;
+    }
+    footer nav a{
+        padding:2%;
+    }
+}
